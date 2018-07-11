@@ -1,63 +1,6 @@
-login as: root
-     +--------------------------------------------------------------------+
-     ¦                         • MobaXterm 8.1 •                          ¦
-     ¦            (SSH client, X-server and networking tools)             ¦
-     ¦                                                                    ¦
-     ¦ ? SSH session to root@192.168.99.41                                ¦
-     ¦   • SSH compression : ?                                            ¦
-     ¦   • SFTP Browser    : ?                                            ¦
-     ¦   • X11-forwarding  : ?  (remote display is forwarded through SSH) ¦
-     ¦   • DISPLAY         : ?  (automatically set on remote server)      ¦
-     ¦                                                                    ¦
-     ¦ ? For more info, ctrl+click on help or visit our website           ¦
-     +--------------------------------------------------------------------+
-
-Last login: Mon Aug  8 14:00:22 2016 from monitor2.itbmv.local
-[root@hpomisaas1gw ~]# cd /
-[root@hpomisaas1gw /]# find / -name *password*
-/etc/pam.d/password-auth
-/etc/pam.d/gdm-password
-/etc/pam.d/password-auth-ac
-/opt/HP/BSM/application-server/standalone/tmp/work/jboss.web/default-host/topaz/org/apache/jsp/WEB_002dINF/setting_002dui/jsps/passwordText_jsp.class
-/opt/HP/BSM/application-server/standalone/tmp/work/jboss.web/default-host/topaz/org/apache/jsp/WEB_002dINF/setting_002dui/jsps/passwordText_jsp.java
-/opt/HP/BSM/JRE/lib/management/jmxremote.password.template
-/opt/HP/BSM/bin/encrypt-password.sh
-/opt/HP/BSM/odb/deploy/ucmdb-ui/static/images/gui/mam_images/gui/images/system/change_password.png
-/opt/HP/BSM/AppServer/webapps/site.war/static/opr/hpstyle/img/icons/password_32x32.svg
-/opt/HP/BSM/AppServer/webapps/site.war/WEB-INF/setting-ui/jsps/passwordText.jsp
-/opt/HP/BSM/AppServer/webapps/site.war/amdocs/eng/doc_lib/Content/BSMC/images/ictb_password_16.png
-/opt/HP/BSM/AppServer/webapps/site.war/amdocs/eng/doc_lib/Content/OMi/images/Icons/icon_password.png
-/opt/HP/BSM/AppServer/webapps/site.war/amdocs/eng/doc_lib/Subsystems/RTSM_Administration/Content/admin/images/sl_reset_password.gif
-/opt/HP/BSM/AppServer/webapps/site.war/images/menu/userSettings/password.gif
-/opt/HP/BSM/WebServer/manual/misc/password_encryptions.html
-/opt/HP/BSM/WebServer/manual/misc/password_encryptions.html.en
-/opt/HP/BSM/WebServer/manual/misc/password_encryptions.html.fr
-/usr/libexec/udisks-helper-change-luks-password
-/usr/share/pixmaps/password.png
-/usr/share/man/man5/password-auth-ac.5.gz
-/usr/share/icons/HighContrast-SVG/scalable/status/dialog-password.svg
-/usr/share/icons/gnome/scalable/status/dialog-password.svg
-/usr/share/icons/gnome/24x24/status/dialog-password.png
-/usr/share/icons/gnome/16x16/status/dialog-password.png
-/usr/share/icons/gnome/22x22/status/dialog-password.png
-/usr/share/icons/gnome/32x32/status/dialog-password.png
-/usr/share/gnome-control-center/ui/gnome-about-me-password.ui
-/usr/share/gdm/simple-greeter/extensions/password
-/usr/lib64/pppd/2.4.5/passwordfd.so
-/usr/lib64/gdm/simple-greeter/plugins/password.so
-/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.45.x86_64/jre/lib/management/jmxremote.password.template
-/usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/management/jmxremote.password.template
-[root@hpomisaas1gw /]#
-[root@hpomisaas1gw /]#
-[root@hpomisaas1gw /]#
-[root@hpomisaas1gw /]# pwd
-/
-[root@hpomisaas1gw /]# cd  install
 [root@hpomisaas1gw install]# ls
 autorun.inf    HPE_OMi_10.11_Linux.zip  HP_OMi_10.10_Linux  LicenseAgreement.pdf  OpenSource  Update
 Documentation  HP_OMi_10.01_Linux.zip   install.sh          omiLogo.ico           Software    updateOMi10to1001.sh
-[root@hpomisaas1gw install]#
-[root@hpomisaas1gw install]#
 [root@hpomisaas1gw install]#
 [root@hpomisaas1gw install]# unzip HPE_OMi_10.11_Linux.zip
 Archive:  HPE_OMi_10.11_Linux.zip
