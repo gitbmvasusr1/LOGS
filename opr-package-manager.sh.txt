@@ -1,0 +1,145 @@
+opr-bbc-trust-server.bat  opr-jobs.sh
+[root@hpeomisaas1gw bin]# ./opr-package-manager.sh -user bvasilev -password me&you2o1 -lp
+[1] 32614
+-bash: you2o1: command not found
+[root@hpeomisaas1gw bin]# ERROR:  Missing required option: [-deplp Deploys an update package to an
+        existing agent., -ex list examples how to use this tool., -lp Lists all
+        existing packages in the given format., -h Print this message and
+        exit., -up Uploads the package described by the package descriptor,
+        -dpv Deletes the package version from the Monitoring Automation
+        database., -dp Deletes the package from the Monitoring Automation
+        database., -version Print the version information and exit.]
+INFO:  Enter -help or -h to find help using the tool
+./opr-package-manager.sh -user bvasilev -password "me&you2o1" -lp
+Operations-agent
+HPE Operations agent Product
+[1]+  Exit 1                  ./opr-package-manager.sh -user bvasilev -password me
+[root@hpeomisaas1gw bin]# ./opr-package-manager.sh -user bvasilev -password 'me&you2o1' -lp
+Operations-agent
+HPE Operations agent Product
+[root@hpeomisaas1gw bin]# ./opr-package-manager.sh -help
+HP Monitoring Automation Package Manager 10.12.034
+
+Usage
+opr-package-manager -help  | -verbose
+
+opr-package-manager <CONNECTION_INFO> -upload_packages [<Name of the package
+                    descriptor file>] -input <Path to the input directory>
+                    [-platform <Valid values: HP-UX, SOL, AIX, LIN, WIN, ALL>]
+
+opr-package-manager <CONNECTION_INFO> -list_packages <Name of the package (E.g.
+                    Operations-agent)>
+
+opr-package-manager <CONNECTION_INFO> -delete_package <Name of the package
+                    (E.g. Operations-agent)>
+
+opr-package-manager <CONNECTION_INFO> -delete_package_version <Name of the
+                    package (E.g. Operations-agent) and version of the package
+                    (E.g. 12.00.000)>
+
+opr-package-manager <CONNECTION_INFO> -deploy_package <Name of the package
+                    (E.g. Operations-agent)> -deploy_mode <Update package mode.
+                    One of NEWEST (updates to latest available version),
+                    CURRENT (updates to the latest hotfix version of the
+                    currently installed version), VERSION (updates to the given
+                    version), PACKAGE (updates to the given package id).>
+                    <targets> = -query_name <query_name> | -view_name
+                    <view_name> | -node_list <node_list> | -all
+                    [-package_id <Package identifier. Either deployment binary
+                    id or full package version (e.g. 11.14.005)>]
+
+
+<CONNECTION_INFO> consists of:
+-username <login name> [ -password <password> | -smartcard | -winCrypto | -jks
+<keystore path> -jksPassword <keystore password> ] [[-port <port>] [-server
+<gatewayserver>] [-ssl] | [-u <URL>]] [-customer <customer ID>]
+
+Arguments:
+ -all,-all
+        all systems with an OM agent in the UCMDB
+ -cu,-customer <customer ID>
+        ID of customer in SaaS environment. If this parameter is not set
+        the default value is 1.
+ -deplm,-deploy_mode <Update package mode. One of NEWEST (updates to
+ latest available version), CURRENT (updates to the latest hotfix version
+ of the currently installed version), VERSION (updates to the given
+ version), PACKAGE (updates to the given package id).>
+        Specifies the update package mode.
+ -deplp,-deploy_package <Name of the package (E.g. Operations-agent)>
+        Deploys an update package to an existing agent.
+ -dp,-delete_package <Name of the package (E.g. Operations-agent)>
+        Deletes the package from the Monitoring Automation database.
+ -dpv,-delete_package_version <Name of the package (E.g. Operations-agent)
+ and version of the package (E.g. 12.00.000)>
+        Deletes the package version from the Monitoring Automation
+        database.
+ -ex,-examples
+        list examples how to use this tool.
+ -f,-format <Valid values: xml and json>
+        Format of the input or output files associated with a web service
+        request. Valid values: xml and json.
+ -h,-help
+        Print this message and exit.
+ -i,-input <Path to the input directory>
+        Input directory for uploading a package.
+ -j,-jks <arg>
+        Use a java key store for authentication.
+ -jp,-jksPassword <arg>
+        Password for accessing java key store
+ -lp,-list_packages <arg>
+        Lists all existing packages in the given format.
+ -nl,-node_list <comma- or blank-separated list of hostnames>
+        node list; checked against UCMDB.
+ -o,-output <Path to the output file>
+        When specified, the response returned by a web service request is
+        saved to a file.
+ -p,-port <port>
+        Set the port number. Default port is 80 for HTTP and 443 for
+        HTTPS. This option cannot be specified in conjunction with the
+        option url.
+ -pkgid,-package_id <Package identifier. Either deployment binary id or
+ full package version (e.g. 11.14.005)>
+        Specifies the package identifier depending on the update package
+        mode.
+ -plt,-platform <Valid values: HP-UX, SOL, AIX, LIN, WIN, ALL>
+        Platforms to upload packages for. One of HP-UX, SOL, AIX, LIN,
+        WIN, ALL
+ -pw,-password <password>
+        Password for the specified user.
+ -qn,-query_name <name of UCMDB TQL query>
+        Operation is applied on all OM agents covered through the query
+ -sc,-smartcard
+        Use certificate stored on smart card or security token for
+        authentication
+ -server <gatewayserver>
+        Set target Gateway Server. The value can be a hostname or IP
+        address of a Gateway Server.
+        Default is hpeomisaas1gw.itbmv.prod.
+        This option cannot be specified in conjunction with the option
+        url.
+ -ssl
+        Set the protocol to HTTPS. Default is to use HTTP. This option
+        cannot be specified in conjunction with the option url.
+ -u,-url <URL>
+        URL of the Gateway Server. Default is:
+        http://hpeomisaas1gw.itbmv.prod:80/opr-config-server
+        This option cannot be specified in conjunction with the options
+        ssl, server, or port.
+ -up,-upload_packages <Name of the package descriptor file>
+        Uploads the package described by the package descriptor
+ -user,-username <login name>
+        Login name of the user required for authentication.
+ -v,-verbose
+        Print verbose output.
+ -version
+        Print the version information and exit.
+ -vn,-view_name <name of UCMDB view>
+        Operation is applied on all OM agents covered through the view
+
+Possible exit status values are:
+        0   Successful completion.
+        1   Failure.
+        3.. Redirection (300-399).
+        4.. Client Error (400-499).
+        5.. Internal Server Error (500-599).
+[root@hpeomisaas1gw bin]#
