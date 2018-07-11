@@ -1,4 +1,3 @@
-
 C:\HPBSM\bin>SupervisorStop.bat
 
 C:\HPBSM\bin>SupervisorStart.bat
