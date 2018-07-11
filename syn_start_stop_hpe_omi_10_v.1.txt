@@ -1,0 +1,18 @@
+
+C:\HPBSM\bin>SupervisorStop.bat
+
+C:\HPBSM\bin>SupervisorStart.bat
+[SC] ChangeServiceConfig2 SUCCESS
+[SC] ChangeServiceConfig SUCCESS
+
+C:\HPBSM\bin>sync-stop-bsm.bat
+A subdirectory or file C:\HPBSM\log already exists.
+0
+
+C:\HPBSM\bin>sync-start-bsm.bat
+[SC] ChangeServiceConfig2 SUCCESS
+[SC] ChangeServiceConfig SUCCESS
+A subdirectory or file C:\HPBSM\log already exists.
+0
+
+C:\HPBSM\bin>
